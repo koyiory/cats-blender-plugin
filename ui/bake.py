@@ -177,17 +177,8 @@ class BakePanel(ToolPanel, bpy.types.Panel):
                     row.prop(item, 'remove_doubles', expand=True)
                     row = col.row(align=True)
                     row.separator()
-                    #row.prop(context.scene, 'bake_loop_decimate', expand=True)
-                    #row = col.row(align=True)
-                    #row.separator()
                     row.prop(item, 'preserve_seams', expand=True)
-                    #row = col.row(align=True)
-                    #row.separator()
-                    #row.prop(context.scene, 'bake_animation_weighting', expand=True)
-                    #if context.scene.bake_animation_weighting: #and not context.scene.bake_loop_decimate:
-                    #    row = col.row(align=True)
-                    #    row.separator()
-                    #    row.prop(context.scene, 'bake_animation_weighting_factor', expand=True)
+
                 row = col.row(align=True)
                 row.prop(item, 'use_physmodel', expand=True)
                 if item.use_physmodel:
@@ -213,7 +204,6 @@ class BakePanel(ToolPanel, bpy.types.Panel):
                     row = col.row(align=True)
                     row.operator(Bake.BakeAddProp.bl_idname)
                     row.operator(Bake.BakeRemoveProp.bl_idname)
-
 
                 row = col.row(align=True)
                 row.prop(item, 'phong_setup', expand=True)
